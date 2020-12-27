@@ -15,8 +15,8 @@ const main = async () => {
 
 	const post = orm.em.create(Post, { title: 'my first post'})
 
-	orm.em.persistAndFlush(post)
-	
+	await orm.em.persistAndFlush(post)
+	await orm.em.nativeInsert(Post, {title: 'My second post'})
 }
 
 main()

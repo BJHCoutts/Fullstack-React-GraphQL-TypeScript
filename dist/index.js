@@ -20,7 +20,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         debug: !constants_1.__prod__,
     });
     const post = orm.em.create(Post_1.Post, { title: 'my first post' });
-    orm.em.persistAndFlush(post);
+    yield orm.em.persistAndFlush(post);
+    yield orm.em.nativeInsert(Post_1.Post, { title: 'My second post' });
 });
 main();
 console.log("hello world test");

@@ -1,1 +1,4 @@
 node_modules
+src/hidden.ts
+dist/hidden.js
+dist/hidden.js.map
